@@ -1,12 +1,15 @@
 let randomFraction = Math.random();
+
+let randomNumber = Math.floor(randomFraction * 9 + 11); // trening generowanie 
+printMessage('Liczba wygenerowana to :' + randomNumber); // liczby od 11 do 19
+
 printMessage('Wylosowany ulamek to: ' + randomFraction);
 
 let calculation = randomFraction * 3 + 1;
 printMessage('Ułamek pomnożony przez 3 i powiekszony o 1: ' + calculation);
 
 let roundNumber = Math.floor(calculation);
-printMessage('Liczba po zaokragleniu d dol to: ' + roundNumber);
-
+printMessage('Liczba po zaokragleniu w dol to: ' + roundNumber);
 
 let computerMove = 'kamień';
 let playerMove = 'papier';
