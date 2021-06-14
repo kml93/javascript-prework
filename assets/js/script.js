@@ -1,4 +1,7 @@
-printMessage('Zagrałem ' + 'kamień' + '! Jeśli Twój ruch to papier, to wygrywasz!');
+let computerMove = `kamień`;
+let playerMove = 'papier';
+
+printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
 
 // document.write('<h2>Hello World!</h2>');
 // document.write('<p>This is my first JS script.</p>');
