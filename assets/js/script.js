@@ -22,6 +22,8 @@ if (roundNumber == 1) {
 }
 printMessage('Mój ruch to: ' + computerMove);
 
+printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to ' + ', to wygrywasz!');
+
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
@@ -32,13 +34,36 @@ if (playerInput == '1') {
     playerMove = 'kamień';
 } else if (playerInput == '2') {
     playerMove = 'papier';
-} else {
+} else if (playerInput == '3') {
     playerMove = 'nożyce';
+} else {
+    playerMove = 'error';
 }
 printMessage('Twój ruch to: ' + playerMove);
 
+if (computerMove == 'kamień' && playerMove == 'kamień') {
+    printMessage('Jest remis. Zagraj ponownie');
+} else if (computerMove == 'papier' && playerMove == 'kamień') {
+    printMessage('Ty przegrywasz');
+} else if (computerMove == 'nożyce' && playerMove == 'kamień') {
+    printMessage('Ty wygrywasz');
+} else if (computerMove == 'kamień' && playerMove == 'papier') {
+    printMessage('Ty wygrywasz');
+} else if (computerMove == 'papier' && playerMove == 'papier') {
+    printMessage('Jest remis');
+} else if (computerMove == 'nożyce' && playerMove == 'papier') {
+    printMessage('Ty przegrywasz');
+} else if (computerMove == 'papier' && playerMove == 'nożyce') {
+    printMessage('Ty wygrywasz2');
+} else if (computerMove == 'kamień' && playerMove == 'nożyce') {
+    printMessage('Ty przegrywasz');
+} else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
+    printMessage('Jest remis');
+} else {
+    printMessage('\"Wybierz liczbe calkowita między 1 a 3\"');
+}
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to ' + ', to wygrywasz!');
+
 
 // if (1 > 2) {
 //     printMessage('Niesamote Jeden jest wiekszy od dwa!!');
